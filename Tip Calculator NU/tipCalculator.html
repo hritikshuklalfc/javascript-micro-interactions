@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="bg-[#f9fbfe] pb-5">
+      <img
+        class="w-full"
+        src="https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/tip-calculator-img.png"
+        alt="Tip Calculator"
+      />
+      <h1
+        class="text-[#264fa2] font-roboto text-4xl font-medium text-center mt-4 mb-4"
+      >
+        Tip Calculator
+      </h1>
+      <div class="flex flex-wrap gap-4 pt-4 justify-center">
+        <div class="w-[300px]">
+          <p class="text-[#7b8794] font-roboto text-xs font-bold mb-2">
+            BILL AMOUNT
+          </p>
+          <input
+            type="text"
+            id="billAmount"
+            class="h-10 w-full border border-[#cbd2d9] rounded-md pl-3"
+          />
+        </div>
+        <div class="w-[300px]">
+          <p class="text-[#7b8794] font-roboto text-xs font-bold mb-2">
+            PERCENTAGE TIP
+          </p>
+          <input
+            type="text"
+            id="percentageTip"
+            class="h-10 w-full border border-[#cbd2d9] rounded-md pl-3"
+          />
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-4 pt-4 justify-center">
+        <div class="w-[300px]">
+          <p class="text-[#7b8794] font-roboto text-xs font-bold mb-2">
+            TIP AMOUNT
+          </p>
+          <input
+            type="text"
+            id="tipAmount"
+            class="h-10 w-full border border-[#cbd2d9] rounded-md pl-3"
+          />
+        </div>
+        <div class="w-[300px]">
+          <p class="text-[#7b8794] font-roboto text-xs font-bold mb-2">TOTAL</p>
+          <input
+            type="text"
+            id="totalAmount"
+            class="h-10 w-full border border-[#cbd2d9] rounded-md pl-3"
+          />
+        </div>
+        <div class="w-full text-center mt-4">
+          <button
+            onclick="calculateTip()"
+            id="calculateButton"
+            class="bg-[#264fa2] text-white font-roboto text-lg p-3 rounded-md hover:bg-blue-700"
+          >
+            CALCULATE
+          </button>
+          <p
+            id="errorMessage"
+            class="text-[#cf1124] font-roboto text-sm font-medium mt-2"
+          ></p>
+        </div>
+      </div>
+    </div>
+    <script src="tipCal.js"></script>
+  </body>
+</html>
