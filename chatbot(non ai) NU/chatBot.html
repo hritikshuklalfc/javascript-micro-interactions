@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div class="pl-2 pr-2">
+      <h1 class="text-center text-2xl font-bold text-[#323f4b] font-roboto">
+        Meet our Chatbot
+      </h1>
+      <img
+        class="w-36"
+        src="https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/chatbot-bot-img.png"
+        alt="Chatbot"
+      />
+      <div
+        class="chat-container flex flex-col gap-2 p-4"
+        id="chatContainer"
+      ></div>
+      <div class="flex justify-end">
+        <img
+          class="w-36"
+          src="https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/chatbot-boy-img.png"
+          alt="User"
+        />
+      </div>
+      <div class="flex justify-center fixed bottom-0 w-full pl-2 pr-2">
+        <input
+          class="bg-[#cbd2d9] font-roboto font-bold h-13 border-0 rounded-md mb-2 mr-2 pl-3 pr-3"
+          id="userInput"
+        />
+        <button
+          class="bg-[#cbd2d9] h-13 rounded-lg p-6 mb-2"
+          id="sendMsgBtn"
+          onclick="sendMsgToChatbot()"
+        >
+          Send
+        </button>
+      </div>
+    </div>
+    <script src="chatBot.js"></script>
+  </body>
+</html>
