@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="flex flex-col justify-center items-center h-screen pt-7">
+      <h1 class="text-2xl font-roboto text-center">Stop the counter timer</h1>
+      <p id="counterValue" class="text-3xl font-bold mt-4 text-center"></p>
+      <button
+        class="mt-4 bg-red-600 text-center text-white pl-4 pr-4 pt-2 pb-2 rounded-md"
+        id="clearBtn"
+      >
+        Clear
+      </button>
+    </div>
+    <script src="stopCounter.js"></script>
+  </body>
+</html>
