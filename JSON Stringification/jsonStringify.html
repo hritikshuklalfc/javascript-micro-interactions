@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <div class="p-8" id="jsonContainer">
+      <h1 class="font-roboto text-xl font-semibold">JSON Stringified Values</h1>
+    </div>
+  </body>
+  <script src="jsonStringify.js"></script>
+</html>
