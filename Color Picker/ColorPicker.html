@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <div
+      class="bg-[#] flex justify-center h-screen items-center p-5"
+      id="colorPickerContainer"
+    >
+      <div class="text-center">
+        <h1 class="text-3xl text-center p-5">Color Picker</h1>
+        <div>
+          <button
+            id="button1"
+            onclick="changeCol1()"
+            class="bg-[#e0e0e0] p-5 border border-solid border-black border-2 m-5"
+          >
+            #e0e0e0
+          </button>
+          <button
+            id="button2"
+            onclick="changeCol2()"
+            class="bg-[#6fcf97] p-5 border border-solid border-black border-2 m-5"
+          >
+            #6fcf97
+          </button>
+          <button
+            id="button3"
+            onclick="changeCol3()"
+            class="bg-[#56ccf2] p-5 border border-solid border-black border-2 m-5"
+          >
+            #56ccf2
+          </button>
+          <button
+            id="button4"
+            onclick="changeCol4()"
+            class="bg-[#bb6bd9] p-5 border border-solid border-black border-2 m-5"
+          >
+            #bb6bd9
+          </button>
+        </div>
+        <div class="text-center text-white bg-black text-xl">
+          <p class="p-5">
+            Background Color :
+            <span id="selectedColorHexCode">#fffff</span>
+          </p>
+        </div>
+        <p class="p-5">
+          Try clicking on one of the colors above to change the background color
+          of this page!
+        </p>
+      </div>
+    </div>
+    <script src="colorPickerFunction.js"></script>
+  </body>
+</html>
