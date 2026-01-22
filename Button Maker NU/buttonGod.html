@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <div class="bg-gradient-to-r from-[#09203f] to-[#537895] p-4">
+      <h1 class="text-center text-white font-roboto text-2xl font-medium mb-4">
+        Button Maker
+      </h1>
+      <div class="bg-white p-6 rounded-lg">
+        <div class="flex flex-col md:flex-row">
+          <div class="w-full">
+            <p class="text-gray-500 font-roboto text-xs font-bold mt-3 mb-1">
+              BACKGROUND COLOR
+            </p>
+            <input
+              type="text"
+              id="bgColorInput"
+              class="w-full h-10 border border-gray-300 rounded-md pl-3"
+            />
+            <p class="text-gray-500 font-roboto text-xs font-bold mt-3 mb-1">
+              FONT COLOR
+            </p>
+            <input
+              type="text"
+              id="fontColorInput"
+              class="w-full h-10 border border-gray-300 rounded-md pl-3"
+            />
+            <p class="text-gray-500 font-roboto text-xs font-bold mt-3 mb-1">
+              FONT SIZE (with px)
+            </p>
+            <input
+              type="text"
+              id="fontSizeInput"
+              class="w-full h-10 border border-gray-300 rounded-md pl-3"
+            />
+            <p class="text-gray-500 font-roboto text-xs font-bold mt-3 mb-1">
+              FONT WEIGHT
+            </p>
+            <input
+              type="text"
+              id="fontWeightInput"
+              class="w-full h-10 border border-gray-300 rounded-md pl-3"
+            />
+            <p class="text-gray-500 font-roboto text-xs font-bold mt-3 mb-1">
+              PADDING (with px)
+            </p>
+            <input
+              type="text"
+              id="paddingInput"
+              class="w-full h-10 border border-gray-300 rounded-md pl-3"
+            />
+            <p class="text-gray-500 font-roboto text-xs font-bold mt-3 mb-1">
+              BORDER RADIUS (with px)
+            </p>
+            <input
+              type="text"
+              id="borderRadiusInput"
+              class="w-full h-10 border border-gray-300 rounded-md pl-3"
+            />
+            <div class="text-right mt-4">
+              <button
+                onclick="onApplyProperties()"
+                class="bg-blue-500 text-white p-2.5 rounded-md hover:bg-blue-600"
+              >
+                Apply
+              </button>
+            </div>
+          </div>
+          <div class="w-full flex justify-center items-center">
+            <button
+              class="font-roboto text-center bg-gray-200 p-3 rounded-md"
+              id="customButton"
+            >
+              Custom Button
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="buttonGod.js"></script>
+  </body>
+</html>
