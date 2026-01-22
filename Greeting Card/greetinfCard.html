@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              dmSans: ["DM Sans"],
+              playfair: ["Playfair Display"],
+              roboto: ["Roboto"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <div
+      class="greeting-card-container bg-[url('https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/greeting-card-1-bg.png')] bg-cover h-screen pl-5 pr-5 pt-5"
+    >
+      <div class="text-right">
+        <p class="greet text-gray-800 font-dmSans font-bold" id="from">From:</p>
+        <p class="greet text-gray-800 font-dmSans font-bold" id="to">To:</p>
+      </div>
+      <div class="flex flex-col justify-center text-center h-[80vh]">
+        <h1 class="text-gray-800 font-playfair font-medium text-[50px]">
+          Happy <br />
+          <span class="text-[75px]">New Year</span>
+        </h1>
+        <p
+          class="greet-text text-gray-700 font-roboto text-[24px] mt-4"
+          id="greetText"
+        ></p>
+      </div>
+    </div>
+    <script src="greetingCard.js"></script>
+  </body>
+</html>
