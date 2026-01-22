@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <div
+      class="flex flex-col justify-center items-center h-screen text-center m-8"
+      id="clickCounterContainer"
+    >
+      <h1 class="text-6xl text-[#2d3a35] m-4 font-bold">
+        The Button has been clicked
+        <span class="text-[#c20a72]" id="counterValue">0</span> times
+      </h1>
+      <p class="text-[#2d3a35] p-8">Click the button to increase the count</p>
+      <button
+        class="text-white bg-[#2563EB] w-40 h-12 text-center rounded-xl"
+        id="incrementButton"
+        onclick="increaseMeDaddy()"
+      >
+        Click Me!
+      </button>
+    </div>
+    <script src="clickCounter.js"></script>
+  </body>
+</html>
