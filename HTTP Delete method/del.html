@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              roboto: ["Roboto"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body>
+    <div
+      class="bg-gradient-to-r from-[#acb6e5] to-[#86fce8] pl-3 pr-3 pt-3 pb-3"
+      id="deleteMethodContainer"
+    >
+      <h1 class="text-[#2d3a8c] font-bold text-3xl mb-8">
+        Delete method practice
+      </h1>
+      <p class="text-[#35469c] font-bold mb-4">
+        REQUEST URL:
+        <span class="font-light">https://gorest.co.in/public-api/users</span>
+      </p>
+      <input
+        placeholder="Enter id"
+        id="userInput"
+        class="text-[#35469c] bg-transparent border border-[#7b93db] pl-1 pr-1 pt-1 pb-1 mt-2"
+      />
+      <br />
+      <button
+        class="mt-3 pl-2 pr-2 pt-2 pb-2 bg-[#4055a8] text-white rounded border-0"
+        id="sendDeleteRequestBtn"
+      >
+        Send Delete Request
+      </button>
+      <div
+        class="bg-white rounded-lg pl-2 pr-2 pt-2 pb-2 mt-4 mb-4"
+        id="requestStatusContainer"
+      >
+        <p>Request Status</p>
+        <p
+          class="request-status text-[#4055a8] font-roboto text-2xl"
+          id="requestStatus"
+        ></p>
+        <p class="hidden" id="loading">Loading....</p>
+      </div>
+      <div
+        class="bg-white rounded-lg pl-2 pr-2 pt-2 pb-2 mt-4 mb-4"
+        id="responseBodyContainer"
+      >
+        <p>Response Body</p>
+        <p
+          class="http-response text-[#4055a8] font-roboto text-sm"
+          id="httpResponse"
+        ></p>
+      </div>
+    </div>
+    <script src="del.js"></script>
+  </body>
+</html>
